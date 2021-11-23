@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: #0D1323;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: start;
+    grid-gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    min-height: 100vh;
+    align-content: center;
+}
+
+.user-card {
+    background-color: #1D204B;
+    border-radius: 16px;
+    min-width: 255px;
+}
+
+.user-card-head {
+    background-color: #5746EA;
+    border-radius: 16px;
+    padding-left: 32px;
+    padding-top: 35px;
+    padding-bottom: 81px;
+}
+
+.user-card-head img {
+    max-width: 77px;
+    border: solid 3px #ffffff;
+    border-radius: 100%;
+    margin-bottom: 40px;
+}
+
+.user-card h1 {
+    color: #F9FFFF;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.user-card p {
+    color: #BFC3F3;
+    font-size: 15px;
+}
+
+.time-menu {
+    color: #7377B4;
+    list-style-type: none;
+    height: 163px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.time-menu li {
+    /* padding-bottom: 6px;
+    padding-top: 6px; */
+    font-size: 18px;
+    display: block;
+}
+
+.time-menu a {
+    text-decoration: none;
+    color: #7377B4;
+}
+
+.time-menu a:hover {
+    color: #F9FFFF;
+}
+
+.time-menu .selected {
+    color: #F9FFFF;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    max-width: 825px;
+}
+
+.card {
+    max-width: 255px;
+    margin-top: auto;
+    padding-top: 45px;
+    border-radius: 16px;
+}
+
+.work {
+    background-color: #FF8B64;
+    background-image: url("images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position: 155px -10px;
+}
+
+.play {
+    background-color: #56C2E6;
+    background-image: url("images/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: 155px -10px;
+}
+
+.study {
+    background-color: #FF5E7D;
+    background-image: url("images/icon-study.svg");
+    background-repeat: no-repeat;
+    background-position: 155px -10px;
+}
+
+.exercise {
+    background-color: #4BCF83;
+    background-image: url("images/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-position: 155px 0px;
+}
+
+.social {
+    background-color: #7235D1;
+    background-image: url("images/icon-social.svg");
+    background-repeat: no-repeat;
+    background-position: 155px -21px;
+}
+
+.self-care {
+    background-color: #F1C75B;
+    background-image: url("images/icon-self-care.svg");
+    background-repeat: no-repeat;
+    background-position: 155px -10px;
+}
+
+.card-body {
+    background-color: #1D204B;
+    padding-bottom: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 18px;
+    border-radius: 16px;
+}
+
+.card-body:hover {
+    background-color: #34397B;
+    cursor: pointer;
+}
+
+.card-body div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+span.three-dots {
+    background-image: url("images/icon-ellipsis.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    padding: 4px;
+    background-size: 21px 5px;
+}
+
+span.three-dots:hover {
+    background-image: url("images/icon-ellipsis_hover.svg");
+}
+
+.card-body div h2 {
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    padding-bottom: 8px;
+}
+
+.card-category {
+    font-size: 19px;
+    font-weight: 400;
+    color: #F9FFFF;
+}
+
+.card-hours {
+    font-size: 56px;
+    font-weight: 300;
+    color: #F9FFFF;
+}
+
+.card-detail {
+    font-size: 15px;
+    font-weight: 400;
+    color: #BFC3F3;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        max-width: 825px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        max-width: 825px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        max-width: 825px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 327px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    
+    .user-card {
+        height: 203px;
+    }
+
+    .user-card-head {
+        /* height: 133px; */
+        padding: 0px;
+        padding-left: 29px;
+        padding-top: 32px;
+        padding-bottom: 31px;
+    }
+
+    .user-card-head > div {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-card-head div div {
+        padding-left: 17px;
+    }
+
+    .user-card-head img {
+        margin: 0px;
+        /* margin-left: 29px; */
+    }
+
+    .user-card h1 {
+        font-size: 24px;
+    }
+
+    .user-card-head img {
+        max-width: 70px;
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        justify-items: center;
+        max-width: 327px;
+    }
+
+    .time-menu {
+        flex-direction: row;
+        height: 64px;
+        align-items: center;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .work, .play, .study, .social, .self-care {
+        background-position: 230px -10px;
+    }
+
+    .exercise {
+        background-position: 230px 0px;
+    }
+
+    .card {
+        width: 327px;
+        max-width: none;
+        padding-top: 38px;
+    }
+
+    .card-hours {
+        font-size: 32px;
+    }
+
+    .card-body {
+        padding-bottom: 18px;
+        padding-top: 19px;
+    }
+
+    .card-body div {
+        padding-bottom: 6px;
+    }
+
+    .card-body > div + div {
+        justify-content: space-between;
+        padding-bottom: 0px;
+    }
+    
+    .card-body > span {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+
+    .container {
+        max-width: 288px;
+    }
+
+    .card {
+        max-width: 288px;
+    }
+
+}
